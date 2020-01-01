@@ -12,5 +12,23 @@ class Test(unittest.TestCase):
         self.assertEqual(sol2, size)
         self.assertEqual(sol3, size)
 
+    def testAssertionError1(self):
+        a = []
+        self.assertRaises(
+            AssertionError, calculate_largest_square_filled_first_approach, a)
+        self.assertRaises(
+            AssertionError, calculate_largest_square_filled_space_optimized1, a)
+        self.assertRaises(
+            AssertionError, calculate_largest_square_filled_space_optimized2, a)
+
+    def testAssertionError2(self):
+        a = [[]]
+        self.assertRaises(
+            AssertionError, calculate_largest_square_filled_first_approach, a)
+        self.assertRaises(
+            AssertionError, calculate_largest_square_filled_space_optimized1, a)
+        self.assertRaises(
+            AssertionError, calculate_largest_square_filled_space_optimized2, a)
+
 if __name__ == "__main__":
     unittest.main()
