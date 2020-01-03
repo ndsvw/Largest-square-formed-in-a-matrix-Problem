@@ -30,5 +30,65 @@ class Test(unittest.TestCase):
         self.assertRaises(
             AssertionError, calculate_largest_square_filled_space_optimized2, a)
 
+    def testSimpleCase1(self):
+        a = [
+            [0]
+        ]
+        self.assert_filled_square_size_equals(a, 0)
+
+    def testSimpleCase2(self):
+        a = [
+            [1]
+        ]
+        self.assert_filled_square_size_equals(a, 1)
+
+    def testSimpleCase3(self):
+        a = [
+            [1, 1],
+            [1, 1]
+        ]
+        self.assert_filled_square_size_equals(a, 2)
+
+    def testSimpleCase4(self):
+        a = [
+            [0, 0],
+            [0, 0]
+        ]
+        self.assert_filled_square_size_equals(a, 0)
+
+    def testSimpleCase5(self):
+        a = [
+            [1, 0],
+            [0, 0]
+        ]
+        self.assert_filled_square_size_equals(a, 1)
+
+    def testSimpleCase6(self):
+        a = [
+            [0, 1],
+            [0, 0]
+        ]
+        self.assert_filled_square_size_equals(a, 1)
+
+    def testSimpleCase7(self):
+        a = [
+            [0, 0],
+            [1, 0]
+        ]
+        self.assert_filled_square_size_equals(a, 1)
+
+    def testSimpleCase8(self):
+        a = [
+            [0, 0],
+            [0, 1]
+        ]
+        self.assert_filled_square_size_equals(a, 1)
+
+    def testSimpleCase9(self):
+        a = [
+            [1, 1]
+        ]
+        self.assert_filled_square_size_equals(a, 1)
+
 if __name__ == "__main__":
     unittest.main()
