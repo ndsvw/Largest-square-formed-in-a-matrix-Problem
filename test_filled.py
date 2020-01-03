@@ -90,5 +90,50 @@ class Test(unittest.TestCase):
         ]
         self.assert_filled_square_size_equals(a, 1)
 
+    def test3x3Nr1(self):
+        a = [
+            [1, 1, 1],
+            [1, 0, 1],
+            [1, 1, 1]
+        ]
+        self.assert_filled_square_size_equals(a, 1)
+
+    def test3x3Nr2(self):
+        a = [
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1]
+        ]
+        self.assert_filled_square_size_equals(a, 3)
+
+    def test3x3Nr3(self):
+        a = [
+            [1, 0, 1],
+            [0, 1, 1],
+            [1, 1, 1]
+        ]
+        self.assert_filled_square_size_equals(a, 2)
+
+    def test5x6(self):
+        a = [
+            [0, 1, 0, 1, 0, 1],
+            [1, 0, 1, 0, 1, 0],
+            [0, 1, 1, 1, 1, 0],
+            [0, 0, 1, 1, 1, 0],
+            [1, 1, 1, 1, 1, 1]
+        ]
+        self.assert_filled_square_size_equals(a, 3)
+
+    def test6x5(self):
+        a = [
+            [1, 0, 0, 0, 0],
+            [1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1],
+            [1, 0, 1, 1, 1],
+            [1, 1, 1, 1, 1],
+            [1, 1, 1, 1, 1]
+        ]
+        self.assert_filled_square_size_equals(a, 3)
+
 if __name__ == "__main__":
     unittest.main()
